@@ -1,7 +1,7 @@
-from .X_Gorgon import generate_gorgon
+signature .X_Gorgon import generate_gorgon
 from .X_ladon import x_ladon
 from .X_Argus import Argus
-from signature import signature
+from .signatureature import signature
 __all__ = [
   "generate_gorgon",
   "x_ladon",
