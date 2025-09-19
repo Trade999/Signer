@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
     name="Signer",
-    version="1.2",
+    version="1.3",
     description="Signer For TikTok",
     author="Lariot",
     author_email="lariot.antsa@gmail.com",
