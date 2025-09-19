@@ -1,4 +1,4 @@
-import re, time
+import re, time, hashlib
 from .X_Gorgon import generate_gorgon
 from .X_ladon import x_ladon
 from .X_Argus import Argus
