@@ -1,4 +1,4 @@
-import re, time, hashlib
+import time, hashlib
 from .X_Gorgon import generate_gorgon
 from .X_ladon import x_ladon
 from .X_Argus import Argus
@@ -6,9 +6,6 @@ from .X_Argus import Argus
 def signature(params, payload: str = None, sec_device_id: str = "", cookie: str or None = None, aid: int = 1233, license_id: int = 1611921764, sdk_version_str: str = "v04.04.05-ov-android", sdk_version: int = 134744640, platform: int = 0, unix: int = None):
   x_ss_stub = hashlib.md5(payload.encode('utf-8')).hexdigest() if payload != None else None
   if not unix: unix = int(time.time())
-  sec_device_id = re.search(r'&device_id=(.*?)&', str(params))
-  if sec_device_id:
-    sec_device_id=sec_device_id.group(1)
   headers = generate_gorgon(params, payload, cookie)
   headers.update(x_ladon())
   xargus = {
