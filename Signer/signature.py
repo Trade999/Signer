@@ -7,7 +7,7 @@ def signature(params, payload: str = None, sec_device_id: str = "", cookie: str 
   x_ss_stub = hashlib.md5(payload.encode('utf-8')).hexdigest() if payload != None else None
   if not unix: unix = int(time.time())
   headers = generate_gorgon(params, payload, cookie)
-  headers.update(x_ladon())
+  headers.update(x_ladon(unix))
   xargus = {
     "x-argus": Argus.get_sign(
       params,
