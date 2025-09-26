@@ -9,3 +9,4 @@ __all__ = [
   "Argus",
   "signature",
 ]
+__version__ = "v1.7"
